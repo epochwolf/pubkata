@@ -1,14 +1,13 @@
 class FizzBuzz
   def fizz_buzz(value)
-    {
-      "1"  =>  1,
-      "2"  =>  2,
-      "3"  =>  "fizz",
-      "4"  =>  4,
-      "5"  =>  "buzz",
-      "6"  =>  "fizz",
-      "10" =>  "buzz",
-      "15" =>  "fizzbuzz",
-    }[value.to_s]
+    if value % 3 == 0 && value % 5 == 0
+      "fizzbuzz"
+    elsif value % 3 == 0
+      "fizz"
+    elsif value % 5 == 0 
+      "buzz"
+    else
+      value
+    end
   end
 end
